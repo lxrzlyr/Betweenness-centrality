@@ -1,5 +1,5 @@
 # Betweenness-centrality
-A novel aolgrithm for Betweenness centrality
+A novel aolgrithm for Betweenness centrality. See the paper “20220409.pdf” for details.
 
 "Betweenness centrality.cu" is the verification code of DAWN and running on the unweighted and undirected networks.
 
