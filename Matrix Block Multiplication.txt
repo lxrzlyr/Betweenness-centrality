@@ -1,0 +1,33 @@
+\renewcommand{\thealgorithm}{2}
+\begin{algorithm}[H] 
+\caption{ Matrix Block Multiplication} 
+\label{ABCLFRS}
+\textbf{Input}: $ A^{(n)},B^{(n)}$\\
+\textbf{Output}: $C^{(n)}$
+\begin{algorithmic}[1]
+\Function {MAIN}{$A^{(n)},B^{(n)},C^{(n)}$}
+\State parallel section 1:
+\State $S1\gets A21+A22$, $T1\gets B12-B11 $
+\State $S3\gets A11-A21$, $T3\gets B22-B12$ 
+\State $S2\gets S1-A11 $, $T2\gets B22-T1 $
+\State parallel section 2:
+\State $M5\gets S1 \times T1$
+\State $M7\gets S3 \times T3$
+\State $M6\gets S2 \times T2$
+\State parallel section 3:
+\State $M1\gets A11 \times B11$
+\State $M2\gets A12 \times B21$
+\State parallel section 4:
+\State $C11\gets M1+M2$, $U2\gets M1+M6 $
+\State $U3\gets U2+M7$, $C22\gets U3+M5$ 
+\State $U4\gets U2+M5 $, $S4\gets A12-S2 $
+\State $T4\gets T2-B21 $
+\State parallel section 5:
+\State $M4\gets S4 \times B22$
+\State $M3\gets A22 \times T4$
+\State parallel section 6:
+\State $C21\gets U3-M4$, $C12\gets U4+M3 $
+\State \Return{$ C^{(n)}$}
+\EndFunction
+\end{algorithmic} 
+\end{algorithm}

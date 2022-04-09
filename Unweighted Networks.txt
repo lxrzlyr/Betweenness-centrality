@@ -1,0 +1,22 @@
+\renewcommand{\thealgorithm}{1}
+\begin{algorithm}[H] 
+\caption{ Unweighted Networks} 
+\label{ABCLFRS}
+\textbf{Input}: $ A^{(n)},B^{(n)}$\\
+\textbf{Output}: $bet_{AM}(\nu)$
+\begin{algorithmic}[1]
+\Function {MAIN}{$A^{(n)},B^{(n)},bet_{AM}(\nu)$}
+\State $bet_{AM}(\nu) \gets 0 $
+\For{$i = 1 \to n-2 $}
+\State $A^{(i+1)} \gets A^{(i)} \times A$
+\State $B^{(i+1)} \gets B^{(i)} \times B$
+\State $C^{(i+1)} \gets A^{(i+1)} - B^{(i+1)}$
+\EndFor
+\For{$k = 1 \to n $}
+\State $sum \gets sum + F(k)$
+\EndFor
+\State $bet_{AM}(\nu) \gets \cfrac{2}{(n-1)\times(n-2)} \times sum$
+\State \Return{$ bet_{AM}(\nu)$}
+\EndFunction
+\end{algorithmic} 
+\end{algorithm}
