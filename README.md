@@ -1,5 +1,8 @@
 # Betweenness-centrality
-A novel aolgrithm for Betweenness centrality. See the paper “20220409.pdf” for details.
+
+The Betweenness centrality algorithm in this repository will be refactored and ported into [DAWN](https://github.com/lxrzlyr/DAWN-An-Noval-SSSP-APSP-Algorithm). There are additional tasks that need to be addressed, hence please await further updates.
+
+A novel aolgrithm for Betweenness centrality. 
 
 "Betweenness centrality.cu" is the verification code of DAWN and running on the unweighted and undirected networks.
 
